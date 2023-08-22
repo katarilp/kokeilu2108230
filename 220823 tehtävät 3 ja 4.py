@@ -16,3 +16,4 @@ tul = str(num1 * num2 * num3)
 print("Lukujen tulo on " +tul+ ".")
 kes = str((num1 + num2 + num3) / 3)
 print("Lukujen keskiarvo on " +kes+ ".")
+
