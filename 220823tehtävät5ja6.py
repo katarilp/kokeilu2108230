@@ -14,7 +14,14 @@ gr = str(round(gra,2))
 print("Paino on moderneilla yksiköillä " +kil+ " kilogrammaa ja " +gr+ " grammaa.")
 
 #tehtävä 6
-
+import random
+# 3: 0-9 ja 4: 1-6
+ekakoodi = list(range(0,10))
+esma = str(random.sample(ekakoodi, 3))
+print("Turvalukon koodi on: " +esma+ "." )
+tokakoodi = list(range(1,7))
+teis = str(random.sample(tokakoodi, 4))
+print("Turvalukon koodi on: " +teis+ ".")
 
 
 
