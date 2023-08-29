@@ -8,7 +8,7 @@ print(math.ceil(luku))
 print(round(luku))
 print(int(luku))
 
-rahat = float(input("Anna rahamäärä: "))
+rahat = int(input("Anna rahamäärä: "))
 #ehtolause
 if rahat >= 5:
     #lohko
@@ -65,3 +65,28 @@ elif ikä >= 18 :
     print("Lääkkeen käyttö on sallittua.")
 else :
     print("Konsultoi lääkäriä.")
+
+#while
+kerrat = int(input("Montako kertaa tervehditään: "))
+tehdyt = 0
+while tehdyt < kerrat:
+    print("Hyvää huomenta!")
+    tehdyt = tehdyt + 1
+
+komento = input("Anna komento: ")
+while komento != "lopeta":
+    print("Suoritan toiminnon: " + komento)
+    komento = input("Anna komento: ")
+print("Toiminnot lopetettu.")
+
+luku = int(input("Kuinka monta kertaa koiran pitää haukkua? "))
+haukut = 0
+while haukut < luku:
+    print("Wuf!")
+    haukut = haukut + 1 # voi kirjoittaa myös 'haukut += 1'
+
+taikasana = input("Musti haukkuu. Käske sen olla hiljaa sanomalla 'stop'! ")
+while taikasana != "stop":
+    print("Wuff!")
+    taikasana = input("Musti haukkuu. Käske sen olla hiljaa sanomalla 'stop'! ")
+print("Musti on hiljaa.")
