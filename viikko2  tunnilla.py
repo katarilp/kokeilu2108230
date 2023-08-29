@@ -87,6 +87,8 @@ while haukut < luku:
 
 taikasana = input("Musti haukkuu. Käske sen olla hiljaa sanomalla 'stop'! ")
 while taikasana != "stop":
-    print("Wuff!")
-    taikasana = input("Musti haukkuu. Käske sen olla hiljaa sanomalla 'stop'! ")
-print("Musti on hiljaa.")
+    haukut = 0
+    while haukut < 3:
+        print("Wuff!")
+        haukut += 1
+    taikasana = (input("Musti haukkuu. Käske sen olla hiljaa sanomalla 'stop'! ")
