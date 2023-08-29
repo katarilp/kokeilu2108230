@@ -11,11 +11,12 @@ mas = num4 + num5 + num6
 kil = str(mas // 1000)
 gra = mas % 1000
 gr = str(round(gra,2))
-print("Paino on moderneilla yksiköillä " +kil+ " kilogrammaa ja " +gr+ " grammaa.")
+print("Paino on moderneilla yksiköillä " +kil+ " kilogrammaa ja "  +gr+ " grammaa.")
 
 #tehtävä 6
 import random
-# 3: 0-9 ja 4: 1-6
+# 3: 0-9 ja 4: 1-63
+
 ekakoodi = list(range(0,10))
 esma = str(random.sample(ekakoodi, 3))
 print("Turvalukon koodi on: " +esma+ "." )
