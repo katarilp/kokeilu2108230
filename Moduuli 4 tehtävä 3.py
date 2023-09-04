@@ -3,20 +3,19 @@
 #Lopuksi ohjelma tulostaa saaduista luvuista pienimmän ja suurimman.
 
 luku1 = input("Syötä luku tai paina enteriä lopettamisen merkiksi: ")
-if luku1 == "":
-    print("Et syöttänyt yhtään lukua.")
-else :
-    luku1 = input("Syötä uusi luku tai paina enteriä lopettamisen merkiksi : ")
-    if luku1 == "":
-        suurin = luku1
-        pienin = luku1
-        pienin1 = int(pienin) - 1
-        suurin1 = int(suurin) + 1
-        int(pienin1)
-        int(suurin1)
-        print("Syöttämistäsi luvuista suurin oli " +str(suurin1)+ " ja pienin " +str(pienin1)+ ".")
-        if int(luku1) < int(pienin1):
-            luku1 = pienin1
-        elif int(luku1) > int(suurin1):
-            luku1 = suurin1
 
+min = max = luku1
+if min == "" or max == "":
+    print("Et syöttänyt yhtään lukua.")
+    quit()
+while luku1 != "":
+    luku1 = float(luku1)
+    min = float(min)
+    max = float(max)
+    if luku1 < min:
+        min = luku1
+    if luku1 > max:
+        max = luku1
+    luku1 = input("Anna seuraava luku: ")
+else:
+    print(f'''{min} oli luvuista pienin ja {max} suurin.'''
