@@ -1,12 +1,11 @@
-luokka = input("Anna hyttiluokka: ")
-luokka1 = (luokka.upper())
-if luokka1 == "A":
+luokka = input("Anna hyttiluokka: ") # tai tähän voisi laittaa .upper() ja myöhemmin kaikissa vain luokka ilman upperia
+if luokka.upper() == "A":
     print("A on ikkunallinen hytti autokannen yläpuolella.")
-elif luokka1 == "B":
+elif luokka.upper() == "B":
     print("B on ikkunaton hytti autokannen yläpuolella.")
-elif luokka1 == "C":
+elif luokka.upper() == "C":
     print("C on ikkunaton hytti autokannen alapuolella.")
-elif luokka1 == "LUX":
+elif luokka.upper() == "LUX":
     print("LUX on parvekkeellinen hytti yläkannella.")
 else :
     print("Virheellinen hyttiluokka.")
