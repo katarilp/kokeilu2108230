@@ -3,7 +3,7 @@
 # Vihje: listan alkioiden lajittelujärjestyksen voi kääntää antamalla sort-metodille argumentiksi reverse=True.
 
 jono = []
-luku = input("Anna luku, tai paina enteriä ohjemlman lopettamiseksi: ")
+luku = input("Anna luku, tai paina enteriä ohjelman lopettamiseksi: ")
 if luku == "":
     print("Et syöttänyt yhtään lukua.")
     quit()
