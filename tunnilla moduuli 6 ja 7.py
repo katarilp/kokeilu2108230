@@ -60,3 +60,50 @@ print(numbers_to_tuple(2,3,57,8,7))
 # Kannattaa käyttäää varmoissa asioissa, esim viikonpäivät.
 tuple1 = (10, 20, 40, 50)
 print(tuple1[2])
+
+print("ILTAPÄIVÄN OSUUS: MONIKKO, JOUKKO JA SANAKIRJA; MODUULI 7")
+# monikon sisään voi tallettaa toisia monikkoja, merkkijonoja tms.
+oma_lista = [1, 2, 3, 4, 5, 6]
+print(oma_lista)
+oma_monikko = (1, 2,( 3, 4), 5, 6)
+print(oma_monikko)
+oma_string = "123456"
+print(oma_string)
+
+# muokataan
+oma_lista[0] = 0        # lista sis. voi muokata (mutable)
+print(oma_lista)        # str ja tuple ei voi muokata (immutable)
+
+viikonpäivät = ("ma", "ti", "ke", "to", "pe", "la", "su")
+järjestysnumero = int(input("anna viikonpäivän järjestysnumero (1-7): "))
+viikonpäivä = viikonpäivät[järjestysnumero-1]
+print(f"{järjestysnumero}. viikonpäivä on {viikonpäivä}.")
+
+#JOUKKO {SET}
+# set.add, set.remove
+# sama alkio voi esiintyä joukossa vain kerran, tuplat haihtuu
+pelit_set = {"monopoli", "shakki", "cluedo"} # järjestäytymätön tietorakenne, printtautuu randomjärjestyksessä
+print(pelit_set)
+pelit_set.add("uno")
+print(pelit_set)
+
+# SANAKIRJA (dictionary) (avain-arvo parit(key-value)) (item = tietue)
+oppilaat = {"Aabel": 100, "Bob": 22, "Charlotta": 30, "Daniel": 45, "Elsi": 52}
+#printataan koko sanakirjasta avaimet
+for i in oppilaat:
+    print(i)
+#printataan arvot:
+for i in oppilaat:
+    print(oppilaat[i])
+
+print(oppilaat.items())
+print(oppilaat.keys())
+print(oppilaat.values())
+
+print(oppilaat["Daniel"]) # hakutoiminto
+oppilaat["Felix"] = 61 # uuden lisääminen
+print(oppilaat.items())
+
+# tietueen  muokkaaminen
+oppilaat["Aabel"] = 101
+print(oppilaat.items())
