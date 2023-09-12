@@ -104,6 +104,20 @@ print(oppilaat["Daniel"]) # hakutoiminto
 oppilaat["Felix"] = 61 # uuden lisääminen
 print(oppilaat.items())
 
-# tietueen  muokkaaminen
+# arvon muokkaaminen
 oppilaat["Aabel"] = 101
+print(oppilaat.items())
+
+nimi = input("Anna nimi: ")
+if nimi in oppilaat:
+    print (f"Henkilön {nimi} ikä on {oppilaat[nimi]}.")
+
+# poistaminen
+del oppilaat["Aabel"]
+print(oppilaat.items())
+# jos halutaan tietoja talteen muuttujaan ennen poistoa
+bob = oppilaat.pop("Bob")
+print(f"Bob poistettiin sanakirjasta, mutta ikä jäi talteen: {bob}!")
+# jos Bob vaihtoi nimeä, tehdään hänelle uusi
+oppilaat["Pekka"] = bob
 print(oppilaat.items())
