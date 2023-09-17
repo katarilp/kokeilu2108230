@@ -8,12 +8,28 @@ saa valita uuden toiminnon miten monta kertaa tahansa aina siihen asti, kunnes h
 Löydät koodeja helposti selaimen avulla.)'''
 
 kentät = {}
-vastaus = input("Haluatko syöttää uuden lentoaseman(uusi),\n "
-                "hakea jo syötetyn lentoaseman tiedot(haku) \n"
+
+def kysely(vastaus):
+    if vastaus == "haku":
+        koodi = input("Anna hakemasi lentoaseman ICAO-koodi: ")
+        print(kentät[koodi])
+
+    if vastaus == "uusi":
+        koodi = input("Anna lentoaseman ICAO-koodi: ")
+        nimi = input("Anna lentoaseman nimi: ")
+        kentät[koodi] = nimi
+    return kentät
+
+vastaus = input("Haluatko syöttää uuden lentoaseman(uusi),\n"
+                "hakea jo syötetyn lentoaseman tiedot(haku)\n"
                 "vai lopettaa(lopetus)?: ")
 vastaus.lower()
-if vastaus == uusi:
-    koodi = input("Anna lentoaseman ICAO-koodi: ")
-    nimi = input("Anna lentoaseman nimi: ")
+while vastaus != "lopetus":
+    kysely(vastaus)
+    vastaus = input("Haluatko syöttää uuden lentoaseman(uusi),\n"
+                   "hakea jo syötetyn lentoaseman tiedot(haku)\n"
+                   "vai lopettaa(lopetus)?: ")
 
-
+if vastaus == "lopetus":
+    print("Ohjelma päättyi.")
+    quit()
