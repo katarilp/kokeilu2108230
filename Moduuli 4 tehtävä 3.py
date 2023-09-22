@@ -18,4 +18,4 @@ while luku1 != "":
         max = luku1
     luku1 = input("Anna seuraava luku: ")
 else:
-    print(f'''{min} oli luvuista pienin ja {max} suurin.'''
+    print(f'{min} oli luvuista pienin ja {max} suurin.')
